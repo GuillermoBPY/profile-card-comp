@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+:root {
+  --Darkcyan: hsl(185, 75%, 39%);
+  --Verydarkdesaturatedblue: hsl(229, 23%, 23%);
+  --Darkgrayishblue: hsl(227, 10%, 46%);
+  --Darkgray: hsl(0, 0%, 59%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.main__container {
+  overflow: hidden;
+  position: relative;
+  background-color: var(--Darkcyan);
+  padding: 1rem;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 350px;
+  height: 400px;
+  background-color: white;
+  border-radius: 15px;
+  position: relative;
+}
+
+.card__header {
+  border-radius: 15px 15px 0 0;
+  height: 38%;
+  background-image: url("./images/bg-pattern-card.svg");
+}
+
+.card__info {
+  background-color: white;
+  position: relative;
+  height: 62%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 15px 15px;
+}
+
+.card__info figure {
+  position: absolute;
+  margin: 0 auto;
+  top: -50px;
+  padding: 5px;
+  background-color: white;
+  width: fit-content;
+  border-radius: 50%;
+}
+
+.card__info img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.card__info article {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.user__info {
+  background-color: white;
+  font-size: 14px;
+  color: var(--Darkgray);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.user__info p:first-child {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--Verydarkdesaturatedblue);
+}
+.user__info p:first-child span {
+  font-weight: 400;
+  margin-left: 0.5rem;
+  color: var(--Darkgray);
+}
+.user_stats {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.user_stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.user_stats div span:first-child {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.user_stats div span:last-child {
+  font-size: 12px;
+  color: var(--Darkgray);
+}
+
+hr {
+  border: none;
+  background-color: hsla(0, 0%, 59%, 0.388);
+  height: 1px;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+a {
+  color: var(--Verydarkdesaturatedblue);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.topsvg,
+.bottonsvg {
+  position: absolute;
+}
+
+.topsvg {
+  position: absolute;
+  top: -600px;
+  left: -680px;
+  width: 850px;
+  z-index: 0;
+}
+
+.bottonsvg {
+  position: absolute;
+  bottom: -680px;
+  right: -600px;
+  width: 850px;
+  z-index: 0;
+}
