@@ -13,6 +13,9 @@
   font-family: "Kumbh Sans", sans-serif;
 }
 
+ul {
+  list-style: none;
+}
 img {
   width: 100%;
   display: block;
@@ -33,7 +36,7 @@ img {
 
 .card {
   width: 100%;
-  max-width: 350px;
+  max-width: 375px;
   height: 400px;
   background-color: white;
   border-radius: 15px;
@@ -44,6 +47,8 @@ img {
   border-radius: 15px 15px 0 0;
   height: 38%;
   background-image: url("./images/bg-pattern-card.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .card__info {
@@ -89,38 +94,14 @@ img {
   margin-bottom: 1.5rem;
 }
 
-.user__info p:first-child {
+.user__info h1 {
   font-size: 18px;
   font-weight: 700;
   color: var(--Verydarkdesaturatedblue);
 }
-.user__info p:first-child span {
+.user__info h1 span {
   font-weight: 400;
   margin-left: 0.5rem;
-  color: var(--Darkgray);
-}
-.user_stats {
-  display: flex;
-  justify-content: space-evenly;
-  align-content: center;
-  gap: 1rem;
-  padding: 1.5rem;
-  height: 100%;
-}
-
-.user_stats div {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-.user_stats div span:first-child {
-  font-weight: 700;
-  font-size: 18px;
-}
-
-.user_stats div span:last-child {
-  font-size: 12px;
   color: var(--Darkgray);
 }
 
@@ -128,6 +109,27 @@ hr {
   border: none;
   background-color: hsla(0, 0%, 59%, 0.388);
   height: 1px;
+}
+
+.user_stats ul {
+  margin: 0 auto;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat((2, 1fr));
+  gap: 0.5rem;
+  padding: 1.5rem 0;
+  border-radius: 0 0 15px 15px;
+}
+
+.user_stats ul li:nth-child(-n + 3) {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.user_stats ul li:nth-last-child(-n + 3) {
+  color: var(--Darkgrayishblue);
+  font-size: 12px;
+  letter-spacing: 2px;
 }
 
 .attribution {
@@ -160,8 +162,8 @@ a {
 
 .bottonsvg {
   position: absolute;
-  bottom: -680px;
-  right: -600px;
-  width: 850px;
+  bottom: -900px;
+  right: -880px;
+  width: 1100px;
   z-index: 0;
 }
